@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -40,58 +41,51 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 4,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 25,
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "+47 988 52 148",
-                      style: TextStyle(
-                        fontFamily: "SourceSansPro",
-                        fontSize: 20,
-                        color: Colors.teal.shade900,
-                      ),
-                    )
-                  ],
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
+              Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 25,
                 ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "+47 988 52 148",
+                    style: TextStyle(
+                      fontFamily: "SourceSansPro",
+                      fontSize: 20,
+                      color: Colors.teal.shade900,
                     ),
-                    SizedBox(
-                      width: 10,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "rune.bjorsnos@gmail.com",
+                    style: TextStyle(
+                      fontFamily: "SourceSansPro",
+                      fontSize: 20,
+                      color: Colors.teal.shade900,
                     ),
-                    Text(
-                      "rune.bjorsnos@gmail.com",
-                      style: TextStyle(
-                        fontFamily: "SourceSansPro",
-                        fontSize: 20,
-                        color: Colors.teal.shade900,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               )
             ],
